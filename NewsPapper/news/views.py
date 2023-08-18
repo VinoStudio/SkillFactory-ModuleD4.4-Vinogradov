@@ -14,7 +14,7 @@ class NewsList(ListView):
     context_object_name = 'news'
     queryset = Post.objects.order_by('-id')
     ordering = ['-postDate']
-    paginate_by = 2
+    paginate_by = 10
 
     def get_queryset(self):
         queryset = super().get_queryset()
